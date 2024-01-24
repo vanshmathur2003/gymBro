@@ -1,23 +1,30 @@
 /* eslint-disable react/prop-types */
-import { Button, Stack, Typography } from '@mui/material';
-
 const ExerciseCard = ({ exercise }) => {
   return (
-    <>
-      <img src={ exercise.gifUrl } alt={ exercise.name } loading="lazy"/>
-      <Stack direction="row">
-        <Button sx={{ ml: '21px', color: '#fff', background: '#ffa9a9', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize' }}>
-          {exercise.bodyPart}
-        </Button>
-        <Button sx={{ ml: '21px', color: '#fff', background: '#fcc757', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize' }}>
-          {exercise.target}
-        </Button>
-      </Stack>
-      <Typography ml="21px" color="#000" fontWeight="bold" mt="11px" pb="10px" textTransform="capitalize" fontSize="22px">
-        {exercise.name}
-      </Typography>
-      </>
-  )
-}
+    <div className="max-w-md mx-auto mb-8 p-4 w-full">
+      <div className="bg-white border rounded-lg overflow-hidden">
+        <img
+          className="w-full h-70 object-cover object-center"
+          src={exercise.gifUrl}
+          alt={exercise.name}
+          loading="lazy"
+        />
+        <div className="p-4">
+          <div className="flex space-x-2">
+            <button className="text-white bg-orange-600 rounded-full px-3 py-1 text-sm capitalize">
+              {exercise.bodyPart}
+            </button>
+            <button className="text-white bg-orange-600 rounded-full px-3 py-1 text-sm capitalize">
+              {exercise.target}
+            </button>
+          </div>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2 mt-2 capitalize">
+            {exercise.name}
+          </h2>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default ExerciseCard
+export default ExerciseCard;
