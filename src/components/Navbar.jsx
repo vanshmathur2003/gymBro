@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex flex-row items-center">
             <span className="text-orange-600 font-bold text-2xl">GymBro</span>
-            <img src={logo} className='h-12 w-max' />
+            <img src={logo} className='h-12 w-15' />
           </div>
 
           {/* Navigation Links */}
